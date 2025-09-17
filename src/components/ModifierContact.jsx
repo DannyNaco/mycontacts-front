@@ -55,21 +55,15 @@ const ModifierContact = () => {
         <h2>Modifier le contact</h2>
         {error && <p style={{ color: "crimson" }}>{error}</p>}
 
-    <label>Prénom
-        <input type="text" value={form.firstName} onChange={(e) => setForm({ ...form, firstName: e.target.value })} />
+    <label>Prénom 
+        <input type="text" value={form.firstName} onChange={(e) => setForm({ ...form, firstName: e.target.value })} /> {/*...form c'est pour garder les infos des autres champs du form inchangés*/}
     </label>
 
-    <label>Nom
-        <input type="text" value={form.lastName} onChange={(e) => setForm({ ...form, lastName: e.target.value })} />
-    </label>
+    <label>Nom <input type="text" value={form.lastName} onChange={(e) => setForm({ ...form, lastName: e.target.value })} /></label>
 
-    <label>Téléphone
-        <input type="text" value={form.phone} onChange={(e) => setForm({ ...form, phone: e.target.value })} />
-    </label>
+    <label>Téléphone <input type="text" value={form.phone} onChange={(e) => setForm({ ...form, phone: e.target.value })} /></label>
 
-    <label>Année de naissance
-        <input type="number" value={form.anneeNaissance} onChange={(e) => setForm({ ...form, anneeNaissance: e.target.value })} />
-    </label>
+    <label>Année de naissance <input type="number" value={form.anneeNaissance} onChange={(e) => setForm({ ...form, anneeNaissance: e.target.value })} /> </label>
 
       <button type="submit">Sauvegarder</button>
     </form>
